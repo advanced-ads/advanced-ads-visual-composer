@@ -2,7 +2,7 @@
 Contributors: webzunft
 Tags: ads, visual composer, frontend editor, page builder, WPBakery
 Requires at least: 4.5
-Tested up to: 4.9
+Tested up to: 5.0.3
 Stable tag: 1.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -11,7 +11,7 @@ Manage ads in your WPBakery Page Builder (formerly Visual Composer) interface.
 
 == Description ==
 
-This plugin combines the WPBakery Page Builder (formerly Visual Composer) and the [Advanced Ads](https://wordpress.org/plugins/advanced-ads/) ad management plugin in order to integrate ads into websites built with that page builder.
+This plugin combines the WPBakery Page Builder (formerly Visual Composer) and the [Advanced Ads](https://wordpress.org/plugins/advanced-ads/) ad management plugin in order to integrate ads and banners into websites built with that page builder.
 
 Please notice that _WPBakery Page Builder_ is [this plugin on codecanyon](https://codecanyon.net/item/visual-composer-page-builder-for-wordpress/242431), formerly called Visual Composer.
 
@@ -21,10 +21,11 @@ The Visual Composer plugin as hosted [here](https://visualcomposer.io) is a diff
 
 Advanced Ads is a powerful, but easy to use ad management plugin. Among the [many features](https://wpadvancedads.com/features/), you can:
 
-* manage all kinds of ads like Google AdSense, DFP, Amazon, Taboola, Tradedoubler, and any other custom code
+* manage all kinds of ads like Google AdSense, Google ad manager, Amazon, Taboola, Tradedoubler, Getyourguide, Booking.com, Ezoic, media.net, Awin and any other custom code
 * show ads for mobile/desktop users only
-* automatically inject ads into content, after specific paragraphs
+* automatically inject ads into content, e.g. after specific paragraphs, headlines or images
 * use Pro visitor conditions like browser width, geo location, browser language and many more
+* benefit from dedicated Google AdSense support for all ad types (e.g. AdSense in.feed, AdSense in.article, AdSense Auto ads) 
 
 **Instructions**
 
