@@ -3,7 +3,7 @@ Contributors: webzunft
 Tags: ads, visual composer, frontend editor, page builder, WPBakery
 Requires at least: 4.5
 Tested up to: 5.1
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -52,6 +52,11 @@ Placement: Create a _Manual_ placement. Open the list of placements and click on
 1. New Ad elements added to the Ad group in Visual Composer
 
 == Changelog ==
+
+= 1.0.5 =
+
+* minor coding optimizations
+* tested with WP 5.1
 
 = 1.0.4 =
 

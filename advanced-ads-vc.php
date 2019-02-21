@@ -3,7 +3,7 @@
  * Plugin Name:       Ads for WPBakery Page Builder (formerly Visual Composer)
  * Plugin URI:        https://wpadvancedads.com
  * Description:       Display Advanced Ads as a Visual Composer Element
- * Version:           1.0.4
+ * Version:           1.0.5
  * Author:            Thomas Maier, Hans-Lukas Herse
  * Author URI:        https://wpadvancedads.com
  * Text Domain:       ads-for-visual-composer
@@ -65,68 +65,78 @@ class Advanced_Ads_Visual_Composer {
 			'category'    => 'Ads',
 			'group'       => 'Advanced Ads',
 
-			'params' => array(
-				array(
-					'type'        => 'textfield',
-					'heading'     => __( 'Ad Id', 'ads-for-visual-composer' ),
-					'param_name'  => 'id',
-					'description' => __( 'Enter the ID of the ad.', 'ads-for-visual-composer' ),
+				'params' => array(
+					array(
+						'type'        => 'textfield',
+						'heading'     => __( 'Ad Id', 'ads-for-visual-composer' ),
+						'param_name'  => 'id',
+						'description' => __( 'Enter the ID of the ad.', 'ads-for-visual-composer' ),
+					),
 				)
 			)
-		)
 		);
 		vc_map( array(
-				'name'        => __( 'Advanced Ads – Group', 'ads-for-visual-composer' ),
-				'description' => __( 'Displays an Ad Group', 'ads-for-visual-composer' ),
-				'base'        => 'the_ad_group',
+			'name'        => __( 'Advanced Ads – Group', 'ads-for-visual-composer' ),
+			'description' => __( 'Displays an Ad Group', 'ads-for-visual-composer' ),
+			'base'        => 'the_ad_group',
+			'icon'        => plugins_url( 'assets/icon.png', __FILE__ ),
+			'category'    => 'Ads',
+			'group'       => 'Advanced Ads',
+
+				"params" => array(
+					array(
+						'type'        => 'textfield',
+						'holder'      => 'div',
+						'heading'     => __( 'Ad Group Id', 'ads-for-visual-composer' ),
+						'param_name'  => 'id',
+						'description' => __( 'Enter the ad group ID.', 'ads-for-visual-composer' ),
+					),
+				)
+			)
+		);
+		vc_map( array(
+				'name'        => __( 'Advanced Ads – Placement', 'ads-for-visual-composer' ),
+				'description' => __( 'Displays an Ad Placement', 'ads-for-visual-composer' ),
+				'base'        => 'the_ad_placement',
 				'icon'        => plugins_url( 'assets/icon.png', __FILE__ ),
 				'category'    => 'Ads',
 				'group'       => 'Advanced Ads',
 
-				"params" => array(
+				'params' => array(
 					array(
-						"type"        => "textfield",
-						"holder"      => "div",
-						"heading"     => __( "Ad Group Id", 'ads-for-visual-composer' ),
-						"param_name"  => "id",
-						"description" => __( "Enter the ad group ID.", 'ads-for-visual-composer' )
-					)
-				)
-			)
-		);
-		vc_map( array(
-				"name"        => __( "Advanced Ads – Placement", 'ads-for-visual-composer' ),
-				"description" => __( "Displays an Ad Placement", 'ads-for-visual-composer' ),
-				"base"        => "the_ad_placement",
-				"icon"        => plugins_url( 'assets/icon.png', __FILE__ ),
-				"category"    => 'Ads',
-				"group"       => 'Advanced Ads',
-
-				"params" => array(
-					array(
-						"type"        => "textfield",
-						"holder"      => "div",
-						"heading"     => __( "Placement slug", 'ads-for-visual-composer' ),
-						"param_name"  => "id",
-						"description" => __( "Enter the slug from a Manual Placement.", 'ads-for-visual-composer' )
-					)
-				)
+						'type'        => 'textfield',
+						'holder'      => 'div',
+						'heading'     => __( 'Placement slug', 'ads-for-visual-composer' ),
+						'param_name'  => 'id',
+						'description' => __( 'Enter the slug from a Manual Placement.', 'ads-for-visual-composer' ),
+					),
+				),
 			)
 		);
 	}
 
+	/**
+	 * Warn if WP Bakery Visual Composer plugin is missing
+	 */
 	public function show_vc_version_notice() {
 		$plugin_data = get_plugin_data( __FILE__ );
 		echo '
         <div class="error">
-          <p>' . sprintf( __( '<strong>%s</strong> requires the <strong><a href="http://bit.ly/vcomposer" target="_blank">WPBakery Page Builder</a></strong> plugin to be installed and activated on your site.', 'ads-for-visual-composer' ), $plugin_data['Name'] ) . '</p>
+          <p>' . sprintf(
+			// translators: %s is the name of this plugin.
+			__( '<strong>%s</strong> requires the <strong><a href="http://bit.ly/vcomposer" target="_blank">WPBakery Page Builder</a></strong> plugin to be installed and activated on your site.', 'ads-for-visual-composer' ),
+			esc_attr( $plugin_data['Name'] )
+		) . '</p>
         </div>';
 	}
 
+	/**
+	 * Warn if Advanced Ads is missing
+	 */
 	public function show_advads_version_notice() {
 		$plugin_data = get_plugin_data( __FILE__ );
 		$plugins     = get_plugins();
-		if ( isset( $plugins['advanced-ads/advanced-ads.php'] ) ) { // is installed, but not active
+		if ( isset( $plugins['advanced-ads/advanced-ads.php'] ) ) { // is installed, but not active.
 			$link = '<a class="button button-primary" href="' . wp_nonce_url( 'plugins.php?action=activate&amp;plugin=advanced-ads/advanced-ads.php&amp', 'activate-plugin_advanced-ads/advanced-ads.php' ) . '">' . __( 'Activate Now', 'ads-for-visual-composer' ) . '</a>';
 		} else {
 			$link = '<a class="button button-primary" href="' . wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=' . 'advanced-ads' ), 'install-plugin_' . 'advanced-ads' ) . '">' . __( 'Install Now', 'ads-for-visual-composer' ) . '</a>';
@@ -136,7 +146,10 @@ class Advanced_Ads_Visual_Composer {
 
 	}
 
-	function ads_for_visual_composer_load_plugin_textdomain() {
+	/**
+	 * Load textdomain
+	 */
+	public function ads_for_visual_composer_load_plugin_textdomain() {
 		load_plugin_textdomain( 'ads-for-visual-composer', false, basename( dirname( __FILE__ ) ) . '/languages/' );
 	}
 
