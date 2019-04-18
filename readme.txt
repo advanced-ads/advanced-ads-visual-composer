@@ -21,11 +21,11 @@ The Visual Composer plugin as hosted [here](https://visualcomposer.io) is a diff
 
 Advanced Ads is a powerful, but easy to use ad management plugin. Among the [many features](https://wpadvancedads.com/features/), you can:
 
-* manage all kinds of ads like Google AdSense, Google ad manager, Amazon, Taboola, Tradedoubler, Getyourguide, Booking.com, Ezoic, media.net, Awin and any other custom code
+* manage all kinds of ads like Google AdSense, Google ad manager, Amazon, Taboola, Tradedoubler, Getyourguide, Booking.com, Ezoic, media.net, The Moneytizer, Infolinks, Content.ad, Awin and any other custom code
 * show ads for mobile/desktop users only
 * automatically inject ads into content, e.g. after specific paragraphs, headlines or images
 * use Pro visitor conditions like browser width, geo location, browser language and many more
-* benefit from dedicated Google AdSense support for all ad types (e.g. AdSense in.feed, AdSense in.article, AdSense Auto ads) 
+* benefit from dedicated Google AdSense support for all ad types (e.g. AdSense in.feed, AdSense in.article, AdSense Matched Content, AdSense link unit, AdSense Auto ads) 
 
 **Instructions**
 
