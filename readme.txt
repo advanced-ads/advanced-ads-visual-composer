@@ -1,5 +1,5 @@
 === Advanced Ads for WPBakery Page Builder (formerly Visual Composer) ===
-Contributors: webzunft
+Contributors: webzunft, advancedads
 Tags: ads, visual composer, frontend editor, page builder, WPBakery
 Requires at least: 4.5
 Tested up to: 5.1
