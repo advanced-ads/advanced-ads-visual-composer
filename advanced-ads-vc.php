@@ -4,7 +4,7 @@
  * Plugin URI:        https://wpadvancedads.com
  * Description:       Display Advanced Ads as a Visual Composer Element
  * Version:           1.0.5
- * Author:            Thomas Maier, Hans-Lukas Herse
+ * Author:            Thomas Maier, Advanced Ads GmbH
  * Author URI:        https://wpadvancedads.com
  * Text Domain:       ads-for-visual-composer
  * Domain Path:       /languages
