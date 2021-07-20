@@ -47,7 +47,7 @@ Placement: Create a _Manual_ placement. Open the list of placements and click on
 
 == Screenshots ==
 
-1. New Ad elements added to the Ad group in WPBakery Page Builder
+1. Ad group in the WPBakery Page Builder with a choice to add ads, ad groups, and manual placements
 
 == Changelog ==
 
