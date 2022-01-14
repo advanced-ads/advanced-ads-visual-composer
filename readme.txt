@@ -1,29 +1,27 @@
 === Advanced Ads for WPBakery Page Builder ===
 Contributors: webzunft, advancedads
-Tags: ads, visual composer, frontend editor, page builder, WPBakery
+Tags: ads, AdSense, frontend editor, page builder, WPBakery
 Requires at least: 4.5
 Tested up to: 5.8
 Stable tag: 1.0.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Manage ads in your WPBakery Page Builder (formerly Visual Composer) interface.
+Manage ads in your WPBakery Page Builder interface.
 
 == Description ==
 
-This plugin combines the WPBakery Page Builder (formerly Visual Composer) and the [Advanced Ads](https://wordpress.org/plugins/advanced-ads/) ad management plugin in order to integrate ads and banners into websites built with that page builder.
-
-Please notice that _WPBakery Page Builder_ is [this plugin on codecanyon](https://codecanyon.net/item/visual-composer-page-builder-for-wordpress/242431), formerly called Visual Composer.
+This plugin combines the [WPBakery Page Builder](https://wpbakery.com/) and the [Advanced Ads](https://wordpress.org/plugins/advanced-ads/) ad management plugin in order to integrate ads and banners into websites built with that page builder.
 
 **Ad Management Features**
 
 Advanced Ads is a powerful, but easy to use ad management plugin. Among the [many features](https://wpadvancedads.com/features/), you can:
 
-* manage all kinds of ads like Google AdSense, Google ad manager, Amazon, Taboola, Tradedoubler, Getyourguide, Booking.com, Ezoic, media.net, The Moneytizer, Infolinks, Content.ad, Awin and any other custom code
+* manage all kinds of ads like Google AdSense, Google Ad Manager (formerly DFP), Amazon, Taboola, Tradedoubler, Getyourguide, Booking.com, Ezoic, media.net, The Moneytizer, Infolinks, Content.ad, Awin and any other ad networks
 * show ads for mobile/desktop users only
 * automatically inject ads into content, e.g. after specific paragraphs, headlines or images
 * use Pro visitor conditions like browser width, geo location, browser language and many more
-* benefit from dedicated Google AdSense support for all ad types (e.g. AdSense in.feed, AdSense in.article, AdSense Matched Content, AdSense link unit, AdSense Auto ads) 
+* benefit from dedicated Google AdSense support for all ad types (e.g. AdSense in.feed, AdSense in.article, AdSense Matched Content, AdSense Auto ads) 
 
 **Instructions**
 
@@ -50,6 +48,11 @@ Placement: Create a _Manual_ placement. Open the list of placements and click on
 1. Ad group in the WPBakery Page Builder with a choice to add ads, ad groups, and manual placements
 
 == Changelog ==
+
+= untagged =
+
+* updated Advanced Ads brand icon
+* updated plugin description
 
 = 1.0.6 =
 
