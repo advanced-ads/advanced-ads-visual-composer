@@ -1,6 +1,6 @@
 === Advanced Ads for WPBakery Page Builder ===
 Contributors: webzunft, advancedads
-Tags: ads, AdSense, frontend editor, page builder, WPBakery
+Tags: ads, AdSense, page builder, WPBakery, banner, banners, addon, amazon, Google AdSense, drag and drop
 Requires at least: 4.5
 Tested up to: 5.9
 Stable tag: 1.0.6
@@ -11,13 +11,13 @@ Manage ads in your WPBakery Page Builder interface.
 
 == Description ==
 
-This plugin combines the [WPBakery Page Builder](https://wpbakery.com/) and the [Advanced Ads](https://wordpress.org/plugins/advanced-ads/) ad management plugin in order to integrate ads and banners into websites built with that page builder.
+This plugin combines the [WPBakery Page Builder](https://wpbakery.com/) and the [Advanced Ads](https://wordpress.org/plugins/advanced-ads/) ad management plugin in order to integrate ads and banners into websites built with that drag and drop page builder.
 
 **Ad Management Features**
 
 Advanced Ads is a powerful, but easy to use ad management plugin. Among the [many features](https://wpadvancedads.com/features/), you can:
 
-* manage all kinds of ads like Google AdSense, Google Ad Manager (formerly DFP), Amazon, Taboola, Tradedoubler, Getyourguide, Booking.com, Ezoic, media.net, The Moneytizer, Infolinks, Content.ad, Awin and any other ad networks
+* manage all kinds of ads like Google AdSense, Google Ad Manager (formerly DFP), Amazon, Taboola, Tradedoubler, Getyourguide, Booking.com, Ezoic, media.net, The Moneytizer, Infolinks, Content.ad, Awin, or a banner from any other ad network
 * show ads for mobile/desktop users only
 * automatically inject ads into content, e.g. after specific paragraphs, headlines or images
 * use Pro visitor conditions like browser width, geo location, browser language and many more
@@ -25,13 +25,13 @@ Advanced Ads is a powerful, but easy to use ad management plugin. Among the [man
 
 **Instructions**
 
-After activating this plugin, as well as WPBakery Page Builder and Advanced Ads, you should find three new elements in the editor:
+After activating this addon, as well as WPBakery Page Builder and Advanced Ads, you should find three new elements in the editor:
 
 * Advanced Ads – Ad
 * Advanced Ads – Group
 * Advanced Ads – Placement
 
-Each of them corresponds to the according element in Advanced Ads. You only need to enter the ids/slug of that element to show it in the WPBakery Page Builder.
+Each of them corresponds to the according element in Advanced Ads. You only need to enter the ID/slug of that element to show it in the WPBakery Page Builder.
 
 All elements are also grouped into the _Ads_ tab.
 
@@ -39,7 +39,7 @@ All elements are also grouped into the _Ads_ tab.
 
 **Where to find the IDs?**
 
-Ads: Open the ad edit screen and stop the Wizard, if active. You should now see the Ad Id below the ad title.
+Ads: Open the ad edit screen and stop the Wizard, if active. You should now see the Ad ID below the ad title.
 Groups: The Group ID is listed in the Details column of the ad group list.
 Placement: Create a _Manual_ placement. Open the list of placements and click on _show usage_ below the placement’s name. Extract the ID from the id attribute in the shortcode field
 
