@@ -1,6 +1,6 @@
 === Advanced Ads for WPBakery Page Builder ===
 Contributors: webzunft, advancedads
-Tags: ads, AdSense, page builder, WPBakery, banner, banners, addon, amazon, Google AdSense, drag and drop
+Tags: ads, AdSense, page builder, WPBakery, banner, banners, addon, amazon, Google AdSense, WP Bakery
 Requires at least: 4.5
 Tested up to: 5.9
 Stable tag: 1.0.6
@@ -31,7 +31,7 @@ After activating this addon, as well as WPBakery Page Builder and Advanced Ads, 
 * Advanced Ads – Group
 * Advanced Ads – Placement
 
-Each of them corresponds to the according element in Advanced Ads. You only need to enter the ID/slug of that element to show it in the WPBakery Page Builder.
+Each of them corresponds to the according element in Advanced Ads. You only need to enter the ID/slug of that element to show it in the WP Bakery Page Builder.
 
 All elements are also grouped into the _Ads_ tab.
 
