@@ -49,16 +49,13 @@ Placement: Create a _Manual_ placement. Open the list of placements and click on
 
 == Changelog ==
 
-= untagged =
-
-* updated Advanced Ads brand icon
-* updated plugin description
-
 = 1.0.6 =
 
 * swapped Advanced Ads brand icon
 * updated screenshot
 * ensured compatibility with WP 5.8
+* updated Advanced Ads brand icon
+* updated plugin description
 
 = 1.0.5 =
 
