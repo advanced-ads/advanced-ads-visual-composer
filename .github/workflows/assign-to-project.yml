@@ -1,0 +1,35 @@
+name: Auto Assign to Advanced Ads Project
+
+on:
+  issues:
+    types: [ opened ]
+  pull_request:
+    types: [ opened ]
+
+env:
+  MY_GITHUB_TOKEN: ${{ secrets.WEBGILDE_GITHUB_TOKEN }}
+
+jobs:
+  assign_one_project:
+    runs-on: ubuntu-latest
+    name: Assign to Advanced Ads Project
+    steps:
+      - name: Assign new issues to Advanced Ads Project
+        uses: srggrs/assign-one-project-github-action@1.2.1
+        if: github.event_name == 'issues'
+        with:
+          project: 'https://github.com/orgs/webgilde/projects/10'
+          column_name: 'Backlog'
+
+      - name: Assign new bugs to Project in "Next"
+        uses: srggrs/assign-one-project-github-action@1.2.1
+        if: github.event_name == 'issues' && contains(github.event.issue.labels.*.name, 'Bug')
+        with:
+          project: 'https://github.com/orgs/webgilde/projects/10'
+          column_name: 'Next'
+
+      - name: Assign new Pull Requests to project
+        uses: srggrs/assign-one-project-github-action@1.2.1
+        if: github.event_name == 'pull_request'
+        with:
+          project: 'https://github.com/orgs/webgilde/projects/11'
