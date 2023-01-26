@@ -2,34 +2,89 @@ name: Auto Assign to Advanced Ads Project
 
 on:
   issues:
-    types: [ opened ]
-  pull_request:
-    types: [ opened ]
+    types:
+      - opened
+      - reopened
+      - labeled
+  pull_request_target:
+    types:
+      - opened
+      - reopened
+      - closed
+  pull_request_review:
+    types:
+      - submitted
 
 env:
-  MY_GITHUB_TOKEN: ${{ secrets.WEBGILDE_GITHUB_TOKEN }}
+  next: Next
+  in_progress: In Progress
+  todo: Todo
+  done: Done
+  gh_project_token: ${{ secrets.WEBGILDE_GITHUB_TOKEN }}
+  org: advanced-ads
 
 jobs:
-  assign_one_project:
+  issue_opened:
+    name: issue_opened
     runs-on: ubuntu-latest
-    name: Assign to Advanced Ads Project
+    if: github.event_name == 'issues' && (github.event.action == 'opened' || github.event.action == 'reopened')
     steps:
-      - name: Assign new issues to Advanced Ads Project
-        uses: srggrs/assign-one-project-github-action@1.2.1
-        if: github.event_name == 'issues'
+      - name: Move issue to ${{ env.backlog }}
+        uses: leonsteinhaeuser/project-beta-automations@v2.0.1
         with:
-          project: 'https://github.com/orgs/webgilde/projects/10'
-          column_name: 'Backlog'
-
-      - name: Assign new bugs to Project in "Next"
-        uses: srggrs/assign-one-project-github-action@1.2.1
-        if: github.event_name == 'issues' && contains(github.event.issue.labels.*.name, 'Bug')
+          gh_token: ${{ env.gh_project_token }}
+          organization: ${{ env.org }}
+          project_id: 1
+          resource_node_id: ${{ github.event.issue.node_id }}
+  bug_labeled:
+    name: bug_opened
+    runs-on: ubuntu-latest
+    if: github.event_name == 'issues' && contains(github.event.issue.labels.*.name, 'Bug')
+    steps:
+      - name: Move bug to ${{ env.next }}
+        uses: leonsteinhaeuser/project-beta-automations@v2.0.1
         with:
-          project: 'https://github.com/orgs/webgilde/projects/10'
-          column_name: 'Next'
-
-      - name: Assign new Pull Requests to project
-        uses: srggrs/assign-one-project-github-action@1.2.1
-        if: github.event_name == 'pull_request'
+          gh_token: ${{ env.gh_project_token }}
+          organization: ${{ env.org }}
+          project_id: 1
+          resource_node_id: ${{ github.event.issue.node_id }}
+          status_value: ${{ env.next }}
+  pr_opened:
+    name: pr_opened
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request_target' && (github.event.action == 'opened' || github.event.action == 'reopened')
+    steps:
+      - name: Move PR to Project Board
+        uses: leonsteinhaeuser/project-beta-automations@v2.0.1
         with:
-          project: 'https://github.com/orgs/webgilde/projects/11'
+          gh_token: ${{ env.gh_project_token }}
+          organization: ${{ env.org }}
+          project_id: 2
+          resource_node_id: ${{ github.event.pull_request.node_id }}
+          status_value: ${{ env.todo }}
+  pr_in_progress:
+    name: pr_in_progress
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request_review' && github.event.action == 'submitted'
+    steps:
+      - name: Move PR to In Progress
+        uses: leonsteinhaeuser/project-beta-automations@v2.0.1
+        with:
+          gh_token: ${{ env.gh_project_token }}
+          organization: ${{ env.org }}
+          project_id: 2
+          resource_node_id: ${{ github.event.pull_request.node_id }}
+          status_value: ${{ env.in_progress }}
+  pr_merged:
+    name: pr_merged
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request_target' && github.event.action == 'closed'
+    steps:
+      - name: Move PR to Done
+        uses: leonsteinhaeuser/project-beta-automations@v2.0.1
+        with:
+          gh_token: ${{ env.gh_project_token }}
+          organization: ${{ env.org }}
+          project_id: 2
+          resource_node_id: ${{ github.event.pull_request.node_id }}
+          status_value: ${{ env.done }}
