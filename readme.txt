@@ -1,5 +1,5 @@
 === Advanced Ads for WPBakery Page Builder ===
-Contributors: webzunft, advancedads
+Contributors: advancedads, webzunft
 Tags: ads, AdSense, page builder, WPBakery, banner, banners, addon, amazon, Google AdSense, WP Bakery
 Requires at least: 4.5
 Tested up to: 6.2
