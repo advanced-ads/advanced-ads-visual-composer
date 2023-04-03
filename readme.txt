@@ -3,7 +3,7 @@ Contributors: advancedads, webzunft
 Tags: ads, AdSense, page builder, WPBakery, banner, banners, addon, amazon, Google AdSense, WP Bakery
 Requires at least: 4.5
 Tested up to: 6.2
-Stable tag: 1.0.6
+Stable tag: 1.0.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -48,6 +48,11 @@ Placement: Create a _Manual_ placement. Open the list of placements and click on
 1. Ad group in the WPBakery Page Builder with a choice to add ads, ad groups, and manual placements
 
 == Changelog ==
+
+= 1.0.7 =
+
+* Fix: update plugin icons
+* Fix: update plugin description
 
 = 1.0.6 =
 

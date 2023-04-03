@@ -3,7 +3,7 @@
  * Plugin Name:       Ads for WPBakery Page Builder (formerly Visual Composer)
  * Plugin URI:        https://wpadvancedads.com
  * Description:       Display Advanced Ads as a Visual Composer Element
- * Version:           1.0.6
+ * Version:           1.0.7
  * Author:            Advanced Ads
  * Author URI:        https://wpadvancedads.com
  * Text Domain:       ads-for-visual-composer
