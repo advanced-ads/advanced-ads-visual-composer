@@ -10,7 +10,7 @@
  * Domain Path:       /languages
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * 
+ *
  * based on Extend WPBakery Page Builder Plugin (formerly Visual Composer)
 */
 
@@ -53,7 +53,7 @@ class Advanced_Ads_Visual_Composer {
 	 */
 	public function add_arguments() {
 
-		if ( ! defined( 'ADVADS_BASE' ) || ! defined( 'WPB_VC_VERSION' ) ) {
+		if ( ! defined( 'ADVADS_PLUGIN_BASENAME' ) || ! defined( 'WPB_VC_VERSION' ) ) {
 			return;
 		}
 
