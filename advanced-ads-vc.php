@@ -123,7 +123,7 @@ class Advanced_Ads_Visual_Composer {
 		echo '
         <div class="error">
           <p>' . sprintf(
-			// translators: %s is the name of this plugin.
+			/* translators: %s is the name of this plugin. */
 			__( '<strong>%s</strong> requires the <strong><a href="http://bit.ly/vcomposer" target="_blank">WPBakery Page Builder</a></strong> plugin to be installed and activated on your site.', 'ads-for-visual-composer' ),
 			esc_attr( $plugin_data['Name'] )
 		) . '</p>
