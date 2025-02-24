@@ -1,0 +1,95 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Ads for WPBakery Page Builder (formerly Visual Composer)"
+"\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-24 13:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.7.1; wp-6.7.2\n"
+"X-Domain: ads-for-visual-composer"
+
+#. %s is the name of this plugin.
+#: C:/gitM2/advanced-ads-visual-composer/advanced-ads-vc.php:137
+#, php-format
+msgid ""
+"<strong>%s</strong> requires the <strong><a href=\"http://bit.ly/vcomposer\" "
+"target=\"_blank\">WPBakery Page Builder</a></strong> plugin to be installed "
+"and activated on your site."
+msgstr ""
+
+#. %s is the name of this plugin.
+#: C:/gitM2/advanced-ads-visual-composer/advanced-ads-vc.php:249
+#, php-format
+msgid ""
+"<strong>%s</strong> requires the <strong><a href=\"https://wpadvancedads."
+"com/#utm_source=advanced-ads&utm_medium=link&utm_campaign=activate-vc\" "
+"target=\"_blank\">Advanced Ads</a></strong> plugin to be installed and "
+"activated on your site."
+msgstr ""
+
+#: C:/gitM2/advanced-ads-visual-composer/advanced-ads-vc.php:239
+msgid "Activate Now"
+msgstr ""
+
+#. Name of the plugin
+msgid "Ads for WPBakery Page Builder (formerly Visual Composer)"
+msgstr ""
+
+#: C:/gitM2/advanced-ads-visual-composer/advanced-ads-vc.php:60
+msgid "Advanced Ads – Ad"
+msgstr ""
+
+#: C:/gitM2/advanced-ads-visual-composer/advanced-ads-vc.php:82
+msgid "Advanced Ads – Group"
+msgstr ""
+
+#: C:/gitM2/advanced-ads-visual-composer/advanced-ads-vc.php:104
+msgid "Advanced Ads – Placement"
+msgstr ""
+
+#. Description of the plugin
+msgid "Display Advanced Ads as a Visual Composer Element"
+msgstr ""
+
+#: C:/gitM2/advanced-ads-visual-composer/advanced-ads-vc.php:72
+msgid "Display an Ad"
+msgstr ""
+
+#: C:/gitM2/advanced-ads-visual-composer/advanced-ads-vc.php:61
+msgid "Displays an Ad"
+msgstr ""
+
+#: C:/gitM2/advanced-ads-visual-composer/advanced-ads-vc.php:83
+#: C:/gitM2/advanced-ads-visual-composer/advanced-ads-vc.php:94
+msgid "Displays an Ad Group"
+msgstr ""
+
+#: C:/gitM2/advanced-ads-visual-composer/advanced-ads-vc.php:105
+#: C:/gitM2/advanced-ads-visual-composer/advanced-ads-vc.php:116
+msgid "Displays an Ad Placement"
+msgstr ""
+
+#: C:/gitM2/advanced-ads-visual-composer/advanced-ads-vc.php:241
+msgid "Install Now"
+msgstr ""
+
+#: C:/gitM2/advanced-ads-visual-composer/advanced-ads-vc.php:92
+msgid "Select a group"
+msgstr ""
+
+#: C:/gitM2/advanced-ads-visual-composer/advanced-ads-vc.php:114
+msgid "Select a placement"
+msgstr ""
+
+#: C:/gitM2/advanced-ads-visual-composer/advanced-ads-vc.php:70
+msgid "Select an ad"
+msgstr ""
