@@ -188,8 +188,9 @@ class Advanced_Ads_Visual_Composer {
 		if ( null === $groups ) {
 			$groups = [ '' => '' ];
 			if ( $this->is_a2_2() ) {
-				foreach ( wp_advads_get_all_groups() as $id => $group ) {
-					$groups[ $group->get_title() ] = $id;
+				$summaries = wp_advads_get_group_summaries();
+				if ( ! empty( $summaries ) ) {
+					$groups = wp_list_pluck( $summaries, 'id', 'title' );
 				}
 			} else {
 				foreach ( ( new Advanced_Ads_Model( $wpdb ) )->get_ad_groups() as $group ) {
