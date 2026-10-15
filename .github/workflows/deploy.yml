@@ -1,22 +1,31 @@
 name: Deploy to WordPress.org
 on:
+  workflow_dispatch:
   push:
     tags-ignore:
       - "*-alpha*"
       - "*-beta*"
+
 jobs:
   tag:
     name: New tag
     runs-on: ubuntu-latest
+    env:
+      SLUG: ads-for-visual-composer      # <-- ensure this matches the WP.org plugin slug
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v4
 
       - name: Install Subversion
-        run: sudo apt-get install subversion
+        run: sudo apt-get update && sudo apt-get install -y subversion
+
+      - name: Verify WordPress.org slug exists
+        run: |
+          echo "Checking https://plugins.svn.wordpress.org/${SLUG}"
+          svn ls "https://plugins.svn.wordpress.org/${SLUG}" || (echo "ERROR: WordPress.org slug '${SLUG}' not found or inaccessible. Update SLUG or create plugin / check committer access." && exit 1)
 
       - name: WordPress Plugin Deploy
         uses: 10up/action-wordpress-plugin-deploy@stable
         env:
           SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
           SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
-          SLUG: ads-for-visual-composer
+          SLUG: ${{ env.SLUG }}
